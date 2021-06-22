@@ -2,25 +2,6 @@ import React from 'react';
 import "./assets/css/base.css"
 import NavBar from './components/navbar';
 
-// const defaultList = [
-// 	{
-// 		"title": "Dấu hiệu của người nhiễm COVID-19",
-// 		"text": "Người bị bệnh COVID-19 thường có biểu hiện sốt, ho, khó thở."
-// 	},
-// 	{
-// 		"title": "Dấu hiệu của người nhiễm COVID-19",
-// 		"text": "Người bị bệnh COVID-19 thường có biểu hiện sốt, ho, khó thở."
-// 	},
-// 	{
-// 		"title": "Dấu hiệu của người nhiễm COVID-19",
-// 		"text": "Người bị bệnh COVID-19 thường có biểu hiện sốt, ho, khó thở."
-// 	},
-// 	{
-// 		"title": "Dấu hiệu của người nhiễm COVID-19",
-// 		"text": "Người bị bệnh COVID-19 thường có biểu hiện sốt, ho, khó thở."
-// 	}
-// ]
-
 const App = (props) => {
 	const [answers, setAnswers] = React.useState([])
 	const [question, setQuestion] = React.useState('')
