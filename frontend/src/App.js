@@ -16,7 +16,6 @@ const App = (props) => {
 			question: question
 		})
 		console.log(payload)
-		console.log(typeof payload)
 
 		const requestOptions = {
             method: 'POST',
@@ -27,7 +26,7 @@ const App = (props) => {
             body: payload
         }
 
-		const url = "http://localhost:5000/get_answers"
+		const url = "http://qaserver:5000/get_answers"
 		const response = await fetch(url, requestOptions)
         const data = await response.json()
 
@@ -45,16 +44,21 @@ const App = (props) => {
 						<button style={{paddingTop: "8px", paddingBottom: "8px", paddingLeft: "16px", paddingRight: "16px", fontSize: "14px"}} type="submit">Go</button>
 					</form>
 				</div>
-				{
-					answers.map((item) => {
-						return (
-							<div>
-								<h3>{item.title}</h3>
-								<p>{item.text}</p>
-							</div>
-						)
-					})
-				}
+				<div style={{paddingTop: "8px", paddingBottom: "8px", paddingLeft: "12px", paddingRight: "12px", marginLeft: "40px", marginRight: "40px"}}>
+					{
+						answers.map((item) => {
+							return (
+								<div className="element">
+									<div>
+										<h4>{item.title}</h4>
+									</div>
+									<p>{item.text}</p>
+								</div>
+							)
+						})
+					}
+				</div>
+				
 			</div>
 		</>
 	)

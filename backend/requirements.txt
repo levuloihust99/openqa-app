@@ -1,0 +1,6 @@
+tensorflow
+transformers
+pandas
+faiss-cpu
+flask
+flask-cors

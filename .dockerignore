@@ -1,0 +1,11 @@
+/.vscode/
+**/__pycache__
+/backend/checkpoints/
+/backend/pretrained/
+/backend/data/
+/backend/.venv/
+/backend/indexer
+/frontend/node_modules/
+run_backend.sh
+run_frontend.sh
+.dockerignore

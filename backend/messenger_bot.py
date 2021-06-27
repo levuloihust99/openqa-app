@@ -1,5 +1,4 @@
 from flask import jsonify, Flask, request
-from flask.templating import render_template
 from flask_cors import CORS
 from transformers import TFBertModel, BertTokenizer
 import tensorflow as tf
@@ -13,17 +12,10 @@ app = Flask(__name__)
 # app.config["DEBUG"] = True
 CORS(app)
 
-@app.route('/index', methods=['GET'])
-def index():
-    render_template()
-
-
 @app.route('/get_answers', methods=['POST'])
 def home():
     data = request.get_json()
     print(data)
-    print(request.origin)
-    print("-----------------------------------------------------------------------------------")
     question = data['question']
     retrieved_docs = retrieve(question, top_docs=10)
     response = jsonify(retrieved_docs)

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services: 
+    frontend:
+        image: frontend:latest
+        container_name: openqa_frontend
+        networks: ['openqa']
+        ports:
+            - "3002:3000"
+    backend:
+        image: backend:latest
+        container_name: openqa_backend
+        networks: ['openqa']
+        volumes:
+            - "./backend/pretrained:/home/app/pretrained"
+            - "./backend/indexer:/home/app/indexer"
+            - "./backend/data:/home/app/data"
+            - "./backend/checkpoints:/home/app/checkpoints"
+
+networks:
+    openqa:
